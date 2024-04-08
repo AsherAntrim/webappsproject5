@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Planning</title>
+</head>
+<body>
+    <header class="site-header">
+        <h1>ACADEMIC PLANNING</h1>
+        <nav class="student-info">
+        </nav>
+        <nav class="header-buttons">
+            <form action="PHP/logout.php" method="post" id="logoutbutton">
+                <input type="submit" value="Logout">
+            </form>
+            <button>Options</button>
+            <button>Save</button>
+        </nav>
+    </header>
+    <main class="grid-section">
+        <div class="TL"></div>
+        <div class="TR">
+            <div class="cell past-term">
+                <div class="title">
+                    <p class="semester">Fall</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Spring</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Summer</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Fall</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Spring</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Summer</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Fall</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Spring</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Summer</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Fall</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Spring</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+            <div class="cell">
+                <div class="title">
+                    <p class="semester">Summer</p>
+                </div>
+                <div class="courses-container"></div>
+            </div>
+        </div>
+        <div class="BL">
+            <div id="creditCounts">
+                <div id="overallCredits"></div>
+                <div id="termCredits"></div>
+            </div>
+        </div>
+        <div class="BR">
+            <input type="text" id="catalogSearch" placeholder="Search catalog..." />
+            <div class="catalog"></div>
+        </div>
+        @RenderBody();
+    </main>
+    <footer class="site-footer">
+        <p>2024 Academic Planning Tool</p>
+    </footer>
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
